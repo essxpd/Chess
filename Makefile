@@ -9,8 +9,8 @@ chess: main.o evaluator.o board.o
 main.o:	main.cpp
 	$(CC) $(CFLAGS) -c main.cpp
 
-evaluator.o: evaluator.cpp evaluator.hpp
-	$(CC) $(CFLAGS) -c evaluator.cpp
+evaluator.o: evaluator.cpp evaluator.hpp board.cpp board.hpp
+	$(CC) $(CFLAGS) -c evaluator.cpp board.cpp
 
 board.o: board.cpp board.hpp
 	$(CC) $(CFLAGS) -c board.cpp

@@ -1,6 +1,6 @@
 #include <iostream>
 #include "evaluator.hpp"
-#include "board.hpp"
+//#include "board.hpp"
 
 using namespace std;
 
@@ -8,10 +8,10 @@ using namespace std;
 
 int main()
 {
-	Board::init_boards();
+	Evaluator::init_pst();
 
-	Evaluator::evaluate(Board::starting_position);	
-	cout << endl << "White Pawns" << endl;
+	cout << "Score: " << Evaluator::evaluate(Board::starting_position) << endl << endl;	
+	/*cout << endl << "White Pawns" << endl;
 	Evaluator::evaluate(Board::pst_w_p); 
 	cout << endl << "White Knights" << endl;
 	Evaluator::evaluate(Board::pst_w_kn);
@@ -39,7 +39,7 @@ int main()
 	Evaluator::evaluate(Board::pst_b_k_mid);
 	cout << endl << "Black King end" << endl;
 	Evaluator::evaluate(Board::pst_b_k_end);
-
+*/
 
 	return 0;
 }
